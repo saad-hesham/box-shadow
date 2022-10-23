@@ -1,18 +1,20 @@
-import React from "react";
-import  ReactDOM  from "react-dom";
-import Home from "./components/Home";
-import "./css/style.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import style from "./style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css'
+import { BrowserRouter } from "react-router-dom";
 
 
 
-const App =()=>{
-    return(
-<div>
-   <Home/>
-</div>
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  </React.StrictMode>
+);
 
 
-    )
-
-}
-ReactDOM.render(<App/>,document.getElementById("root"))
